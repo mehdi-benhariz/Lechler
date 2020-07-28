@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card-group">
+{% for product in AllProducts %}
+<div class="card col-sm-6" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{product.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+    Stock : {{product.quantity}}   || Prix: {{product.prix}} DT  <span id="marge" >Marge : {{product.margeBeneficiere}}  </span>
+    </h6>
+    <p class="card-text"> </p>
+    
+    <a href="{% url 'update' product.id %}" class="card-link">
+    <button type="button" class="btn btn-info">
+     More
+    </button>    
+    </a>
+    <a href="{% url 'delete' product.id %}" class="card-link">
+    <button type="button" class="btn btn-danger">
+    Delete
+    </button>
+    </a>
+  </div>
+</div>
+{% endfor %}    
+</div>
+
+{% endblock content %}

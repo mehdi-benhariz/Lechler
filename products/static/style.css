@@ -1,0 +1,41 @@
+.card{
+    margin: .9em;
+    padding: .2em;
+    width: 30%;
+    display:inline-block;
+    box-shadow:2px 2px 2px 2px rgb(177, 175, 175) ;
+}
+
+form{
+    display: inline;
+    text-align: center;
+}
+.input-group{
+    display: inline;
+}
+
+input{
+    padding: .9rem;
+    margin: .5rem;
+}
+span{
+    padding: .9rem;
+    margin: .5rem;
+}
+#titre{
+    text-align: center;
+    color:#00695c;
+    padding-top: 1.2rem;
+}
+#Product-display{
+    text-align: center;
+    text-decoration: none;
+    padding-top: 2rem;
+    color: #2fe4cf;
+    border: cadetblue ;
+    margin: 10px;
+}
+#marge{
+    text-align: right;
+    color: rgb(9, 245, 9);
+}

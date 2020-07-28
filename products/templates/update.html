@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<form>
+{% csrf_token %}    
+<div class="card" style="width: 30rem;">
+
+  <div class="card-body col-5 " id="detail-card"  >
+    <h5 class="card-title">details: </h5>
+    <div class="input-group" >
+        <div class="input-group-prepend">
+            <span class="input-group-text" >name</span>
+            <input  type="text" value={{ProductToUpdate.name}} placeholder="name" />
+        </div>
+        <div class="input-group-prepend">
+            <span class="input-group-text" >prix</span>
+            <input  type="text" value={{ProductToUpdate.prix}} placeholder="prix" />
+        </div>
+
+        <div class="input-group-prepend">
+            <span class="input-group-text" >quantity</span>
+            <input  type="text" value={{ProductToUpdate.quantity}} placeholder="quantity" />
+        </div>
+
+        
+        <div class="input-group-prepend">
+            <span class="input-group-text" >prixAchat</span>
+            <input  type="text" value={{ProductToUpdate.prixAchat}} placeholder="prixAchat" />
+        </div>
+
+        <div class="input-group-prepend">
+            <span class="input-group-text" >margeBeneficiere</span>
+            <input  type="text" value={{ProductToUpdate.margeBeneficiere}} placeholder="margeBeneficiere" />
+        </div>
+
+        <div class="input-group-prepend">
+            <span class="input-group-text" >TVA</span>
+            <input  type="text" value={{ProductToUpdate.TVA}} placeholder="TVA" />
+        </div>
+
+      </div>
+  </div>
+  <button type="submit" name="UpdateProduct" class="btn btn-warning" >Submit</button>    
+
+</div>
+</form>
+
+<style>
+#detail-card{
+   width:80%;
+   height: 90%;
+}
+</style>
+{% endblock content %}
